@@ -1,0 +1,169 @@
+/*
+Get CSS custom CSS Reset.
+../reset.css
+*/
+:root {
+  /* ## Colors */
+  /* - Very Dark Grayish Blue: hsl(217, 19%, 35%) */
+  --clr-vd-blue: hsl(217, 19%, 35%);
+  /* - Desaturated Dark Blue: hsl(214, 17%, 51%) */
+  --clr-dsd-blue: hsl(214, 17%, 51%);
+  /* - Grayish Blue: hsl(212, 23%, 69%) */
+  --clr-gb-blue: hsl(212, 23%, 69%);
+  /* - Light Grayish Blue: hsl(210, 46%, 95%) */
+  --clr-lg-blue: hsl(210, 46%, 95%);
+}
+body {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  font-family: "Manrope", sans-serif;
+  font-size: 13px;
+  background-color: var(--clr-gb-blue);
+}
+img {
+  width: 100%;
+  display: block;
+}
+
+.content {
+  position: relative;
+  display: grid;
+  grid-template-areas: "content-img" "content-text";
+  grid-template-columns: 1fr;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  background-color: var(--clr-lg-blue);
+}
+
+.content__text {
+  /* margin: 1.8rem; */
+  grid-area: content-text;
+}
+.text__title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--clr-vd-blue);
+  margin: 1rem;
+}
+.text__body {
+  margin: 1rem;
+  font-weight: 700;
+  color: var(--clr-gb-blue);
+}
+.profile {
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+  grid-template-areas: "profile-img profile-name share-button"
+  "profile-img profile-date share-button";
+  position: relative;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: .5rem;
+}
+
+.profile__img {
+  margin-left: .5rem;
+  border-radius: 50%;
+  overflow: hidden;
+  width: 2.5rem;
+  grid-area: profile-img;
+}
+
+.profile__name {
+  /* display: block; */
+  font-weight: 700;
+  color: var(--clr-vd-blue);
+  grid-area: profile-name;
+}
+.profile__date {
+  /* display: block; */
+  color: var(--clr-gb-blue);
+  grid-area: profile-date;
+}
+.profile__share {
+  position: relative;
+  display: grid;
+  place-content: center;
+  border-radius: 50%;
+  background-color: var(--clr-dsd-blue);
+  width: 2rem;
+  height: 2rem;
+  cursor: pointer;
+  grid-area: share-button;
+  color: var(--clr-dsd-blue);
+}
+/* .profile__share img {} */
+
+.social-widget {
+  background-color: var(--clr-vd-blue);
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2rem 1.5rem;
+  position: absolute;
+  width: 100%;
+  /* overflow: hidden; */
+}
+.social-widget img {
+  /* padding-right: .5rem; */
+  width: 1.2rem;
+}
+
+.hidden {
+  display: none;
+}
+@media (min-width: 700px) {
+  .content {
+    position: relative;
+    grid-template-areas: "content-img content-text";
+    grid-template-columns: 1fr 1fr;
+  }
+  .content__image {
+    grid-area: content-img;
+  }
+  .content__text {
+    grid-area: content-text;
+    position: relative;
+  }
+  .profile {
+    max-width: 400px;
+    margin: 1rem;
+  }
+  .social-widget {
+    border-radius: .5rem;
+    right: 0;
+    bottom: 110%;
+    transform: translateX(20%);
+
+  }
+
+  .social-widget::after {
+    position: absolute;
+    content: "";
+    width: 20px;
+    height: 20px;
+    background-color: var(--clr-vd-blue);
+    bottom: -5%;
+    left: 50%;
+    transform: rotate(45deg);
+  }
+
+  .social-widget {
+    max-width: 200px;
+  }
+}
+.hidden {
+  display: none;
+}
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
