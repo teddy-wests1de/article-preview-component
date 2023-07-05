@@ -20,6 +20,7 @@ body {
   font-family: "Manrope", sans-serif;
   font-size: 13px;
   background-color: var(--clr-gb-blue);
+  min-height: 100vh;
 }
 img {
   width: 100%;
