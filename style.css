@@ -122,6 +122,7 @@ img {
     position: relative;
     grid-template-areas: "content-img content-text";
     grid-template-columns: 1fr 1fr;
+    max-width: 940px;
   }
   .content__image {
     grid-area: content-img;
